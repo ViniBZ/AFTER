@@ -1,0 +1,10 @@
+<span lang="en-IE" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" align="center" style="line-height: 100%; margin-bottom: 0cm">
+Now the time comes when we write the words that have been floating.</p>
+<p class="western" align="justify" style="line-height: 100%; margin-bottom: 0cm">
+<font color="#c9211e">Now the time comes when w</font>e write the
+words that have been floating. Now the time comes when we write the
+words that have been floating.<b> </b><i><b>Now the time comes when</b></i><b>
+we write the words that have </b><i><b>been</b></i><b> floating</b>.
+<font size="4" style="font-size: 15pt"><b>Now the time comes when </b></font><font size="4" style="font-size: 15pt">we
+write the words that have been floating.</font></p>
+</span>

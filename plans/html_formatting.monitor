@@ -1,0 +1,57 @@
+////////////////// PARSE HTML !
+PARSES ANY HTML
+BUT ELIMINATES MOST TAGS KEEPING ONLY THE STYLE
+DONT PARSE "\n" line breaks
+
+///////////////// MAKE FORMATTED HTML !
+USES
+    TEXT
+    TEXT_FORMAT
+
+TO GENERATE NEW HTML
+
+
+ID
+    a unique number to each node, as in TEXT_FORMAT[].node
+
+TNO
+    holds the char offset of each node that can be a
+    startContainer or endContainer in range
+    
+    The index for TNO will be the number in the VZN-## id
+    
+TNL
+    holds the amount of char in the node
+
+
+
+TEXT_FORMAT[].node
+    Holds the index of the node, the one in ID
+    
+///////////////// GET SELECTION !
+
+get start and end containers
+IF NODE.TYPE == TEXT
+
+GET INDEX IN PARENT NODE
+    IF INDEX == 0
+        IF PARENT IS TEXT_DIV
+            I = START_OFFSET
+        ELSE
+            I = TNE[PAR_ID] + START_OFFSET
+    ELSE
+        I = TNE[ELM_BEFORE_ID] + START_OFFSET
+ELSE
+    I = TNO[NODE]?
+    
+    
+///////////////// SET SELECTION(S,E) !
+START_CONTAINER = ELM('VZN-'+TXF[S].NODE)
+END_CONTAINER = ELM('VZN-'+TXF[E].NODE)
+
+START_OFFSET = S - TNO[TXF[S].NODE]
+END_OFFSET = E - TNO[TXF[E].NODE]
+
+
+
+

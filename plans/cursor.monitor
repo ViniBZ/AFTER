@@ -1,0 +1,8 @@
+MOVE CURSOR()
+    IF LEFT
+        IF SELECTED
+            SET_SELECTION(SEL_S, SEL_S)
+            
+            
+        
+    

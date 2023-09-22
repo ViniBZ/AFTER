@@ -1,0 +1,47 @@
+TEXT_FORMAT[] length:5. TEXT_LEN:5
+
+
+[0]TEXT                :v
+[0]TEXT_FORMAT type    :0
+                 . format  :0
+                 . color   :false
+                 . size    :false
+                 . ref_type:0
+                 . ref_node:0
+
+[1]TEXT                :i
+[1]TEXT_FORMAT type    :0
+                 . format  :0
+                 . color   :false
+                 . size    :false
+                 . ref_type:0
+                 . ref_node:0
+
+[2]TEXT                :n
+[2]TEXT_FORMAT type    :0
+                 . format  :0
+                 . color   :false
+                 . size    :false
+                 . ref_type:0
+                 . ref_node:0
+
+[3]TEXT                :i
+[3]TEXT_FORMAT type    :0
+                 . format  :0
+                 . color   :false
+                 . size    :false
+                 . ref_type:0
+                 . ref_node:0
+
+[4]TEXT                :
+
+[4]TEXT_FORMAT type    :0
+                 . format  :0
+                 . color   :false
+                 . size    :false
+                 . ref_type:0
+                 . ref_node:0
+
+[0]TNS:0
+
+[0]LINE start:0. end:5

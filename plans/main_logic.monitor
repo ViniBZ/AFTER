@@ -1,0 +1,39 @@
+PENDING_LOAD = TRUE
+
+/////////////////////////////// LOAD EDITOR
+
+
+
+
+
+
+IF PENDING_LOAD
+    PARSE_HTML
+    MAKE_FORMATTED_HTML
+
+
+
+
+/////////////////////////////// TEXT INPUT
+
+LOADING_PENDING = TRUE
+
+
+
+
+/////////////////////////////// FORMAT BUTTON PRESS
+
+IF PENDING_LOAD
+    PARSE_HTML
+
+IF !SELECTTED
+
+ELSE
+    SET FORMAT IN SELECTED TEXT
+    MAKE_FORMATTED_HTML
+
+
+/////////////////////////////// UPDATE EDITOR
+PARSE_HTML
+MAKE_FORMATTED_HTML
+

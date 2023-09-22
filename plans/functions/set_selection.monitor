@@ -1,0 +1,6 @@
+TEXT_FORMAT
+    ref_type
+    *-1 : is a br, ref_node is the br span node NI
+    *0  : is a text node in text_div, ref_node is the childNode index
+    *more than 0 : is the NI of the parent node, ref_node,
+    the childNode index

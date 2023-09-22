@@ -1,0 +1,24 @@
+There will be 2 format bytes for each char
+Each bit of byte 1 will be some formatting, for example bold
+And byte 2 will determine the colors
+/////////// BYTE 1 
+0 : bold
+1 : italic
+2 : underline
+3 : crossed
+4 : 
+5 : 
+6 : has_color
+7 : has_size
+
+/////////// BYTE 2 
+*(color if has_color, otherwise font size if has_size) 
+
+
+/////////// BYTE 3 
+*(font size if has_color and has_size)
+
+
+
+If the formatting data is smaller than content, the rest of
+content will be determined by default data formatting

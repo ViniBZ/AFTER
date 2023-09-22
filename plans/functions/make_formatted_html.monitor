@@ -1,0 +1,106 @@
+Suppose string is
+<span>VINI</span>
+TNS[] = 0
+TNE[] = 4 
+
+/////////////////////////
+OPEN_NI = []
+OI = 0;
+NI = 1 
+TNS[0] = 0
+
+LOOP TEXT_LEN !
+
+IF TXF.TYPE == 1 
+    CONTENT += <br> 5
+    TNS[NI] = I   2
+    TNE[NI] = I+1 #
+        
+    CONTINUE 4
+    
+    
+IF TXF.FORMAT != CUR_FORMAT
+    IF CUR_FORMAT != 0 
+        CONTENT += </SPAN> 5
+        OI-- #
+        TNE[OPEN_NI[OI]] = I #
+        REMOVE OPEN_NI[OI] #
+
+    CUR_FORMAT = TXF.FORMAT
+    IF CUR_FORMAT != 0
+        CONTENT += <SPAN> 5
+        TNS[NI] 2
+        OPEN_NI[OI] = NI #
+        OI++ #
+        
+IF OI > 0
+    TXF.NODE = OPEN_NI[OI-1]
+ELSE
+    TXF.NODE = 0
+
+CONTENT += TEXT[T] 6
+
+END LOOP TEXT_LEN !
+
+IF OPENED_SPAN
+    CONTENT += </SPAN> 5
+    OI-- #
+    TNE[OPEN_NI[OI]] = I #
+    REMOVE OPEN_NI[OI] #
+///////////////////////// notes
+I have placed BR inside a SPAN
+because when selecting the target node would
+be text_div. That doesnt happen when the selection
+limit is at text inside text_div, where the node is
+the text node
+
+The TNS/TNE which maps the offsets for the nodes will be indexed
+based on the id of the nodes. Since text nodes have no id
+they wont be indexed, and their offset will rely on their parent's
+///////////////////////// alternative
+CONTENT 1
+TF(TEXT_FORMAT) 2
+TNS / TNE 4
+LINES 5
+OPENED_SPAN = FALSE 6
+--------
+NEW_LINE = TRUE 5
+-------- LOOP I
+IF NEW_LINE
+    LINES[LI].S = 0
+    NEW_LINE = FALSE 5
+    
+IF OPENED_SPAN && CUR_FORMAT != TF[I].FORMAT
+    CLOSE SPAN
+    CONTENT += </SPAN>1
+    OPENED_SPAN = FALSE 6
+
+IF !OPENED_SPAN
+    OPEN SPAN
+    
+    CONTENT += <SPAN ID STYLE_STR>1
+    TNS[NI] = I 4
+    NI++
+    OPENED_SPAN = TRUE 6
+    CUR_FORMAT = TF[I].FORMAT
+    
+CONTENT += TEXT[I]
+TF[I].NODE = NI
+
+IF TEXT[I] == BR(\n)
+    LINES[LI].E = I+1 
+    LI++
+    NEW_LINE = TRUE 5
+-------- END LOOP I
+
+IF OPENED_SPAN
+    CLOSE SPAN
+    CONTENT += </SPAN>1
+
+IF NEW_LINE == FALSE
+    LINES[LI].E = I 5
+
+
+
+    
+    

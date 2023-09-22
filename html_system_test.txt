@@ -1,0 +1,34 @@
+blablabla
+<span id="span-br-1"><br></span>
+<span id="span-br-2"><br></span>
+<span id="span-br-3"><br></span>
+
+<span id="span-tx-1">
+
+&nbsp;&nbsp;&nbsp;blebleble
+
+<span id="span-br-4"><br></span>
+<span id="span-br-5"><br></span>
+<span id="span-br-6"><br></span>
+
+    bliblibli
+    
+    <span id="span-tx-2">
+        blobloblo
+        <span id="span-br-7"><br></span>
+        <span id="span-br-8"><br></span>
+        <span id="span-br-9"><br></span>
+        blublublu
+    </span>
+
+    <table id="table-1">
+    <tr id="tr-1">
+        <td id="td-1">MANA</td>
+        <td id="td-2">MENE</td>
+    </tr>
+    <tr id="tr-2">
+        <td id="td-3">MINI</td>
+        <td id="td-4">MONO</td>
+    </tr>
+    </table>
+</span>

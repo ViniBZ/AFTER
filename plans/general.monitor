@@ -1,0 +1,23 @@
+This text editor should be able to parse HTML formatted
+text into its data structure which consists of 1 to 3 bytes for each
+character. I'm not sure if it will be 1 to 3 bytes in the javascript 
+engine because of the size of javascript variables. 
+These bytes will determine the text format char by char.
+
+See text_format.monitor for details
+
+For displaying in the browser, the formatting data structure will be parsed
+into HTML.
+
+For reading from other sources, the program will be able to parse html into this formating.
+
+parse_html()
+    reads the html code to set:
+    TEXT_FORMAT
+    TEXT_LEN
+    
+make_formatted_html()
+    sets:
+    TNO which holds the text offset of each node
+    TEXT_FORMAT[].node which holds teh node index
+    of the char.
